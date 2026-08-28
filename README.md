@@ -9,6 +9,9 @@ Funkcje:
 - szkicowanie modułów PV, tras AC/DC i urządzeń,
 - lokalny zapis offline,
 - generowanie PDF,
-- opcjonalna integracja z Google przez prywatny adres Apps Script ustawiany na urządzeniu.
+- wybór Beneficjenta i pobieranie przydzielonych urządzeń z zakładki `REALIZACJA - AKTUALIZOWANA`,
+- automatyczny zapis roboczy do zakładki `ODPOWIEDZI`,
+- generowanie PDF, zapis dokumentacji na Dysku Google i wysyłka e-mail,
+- gotowe połączenie z wdrożoną usługą Google Apps Script — bez konfiguracji na urządzeniu.
 
-Aplikacja nie zawiera publicznie zapisanych danych dostępowych ani identyfikatorów prywatnych arkuszy.
+Aplikacja działa bez logowania użytkownika. Dostęp do danych realizuje wdrożenie Apps Script uruchamiane na koncie właściciela arkusza.
