@@ -78,6 +78,34 @@ button{cursor:pointer}
 .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .photo{aspect-ratio:1;background:#eef2f6;border:1px dashed #9aa9b8;border-radius:8px;overflow:hidden;display:grid;place-items:center}
 .photo img{width:100%;height:100%;object-fit:cover}
+.photoIntro p{margin-bottom:12px}
+.photoProgress{display:inline-flex;align-items:center;gap:5px;background:var(--green-soft);border:1px solid #cbd9b7;color:var(--green-dark);padding:10px 13px;border-radius:10px}
+.photoRequirement{border-left:5px solid var(--orange)}
+.photoRequirement.complete{border-left-color:var(--green)}
+.photoHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}
+.photoHeader small{display:block;text-transform:uppercase;letter-spacing:.07em;font-weight:850;color:var(--muted);margin-bottom:3px}
+.photoHeader h2{margin:0}
+.requiredState{flex:none;border-radius:999px;padding:7px 10px;background:#fff2dc;color:#9a5a00;font-size:12px;font-weight:850}
+.complete .requiredState{background:var(--green-soft);color:var(--green-dark)}
+.photoGallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 14px}
+.photoShot{position:relative;margin:0;background:#eef2f0;border-radius:11px;overflow:hidden;border:1px solid var(--line)}
+.photoShot img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.photoShot figcaption{padding:8px;font-size:11px;color:var(--muted)}
+.deletePhoto{position:absolute;right:7px;top:7px;width:34px;height:34px;border-radius:50%;border:0;background:rgba(145,31,31,.94);color:#fff;font-size:23px;line-height:1;display:grid;place-items:center;box-shadow:0 2px 10px #0004}
+.photoActions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photoAction{min-height:51px;border:1.5px solid var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:11px 14px;font-weight:850;color:var(--green);cursor:pointer;background:#fff;text-align:center}
+.photoAction.camera{background:var(--green);color:#fff}
+.photoAction input{display:none}
+.legalDoc{font-size:15px;line-height:1.65}
+.legalDoc p{margin:0 0 15px}
+.legalDoc ol{padding-left:22px;margin:0 0 20px}
+.legalDoc li{margin-bottom:12px;padding-left:5px}
+.legalTitle{text-align:center;font-size:25px!important;letter-spacing:.04em!important}
+.powerFields{margin:20px 0}
+.editableValue{display:inline;border-bottom:2px dotted var(--green);font-weight:800;padding:0 4px;color:var(--green-dark)}
+.consentCheck{display:flex;align-items:flex-start;gap:11px;margin-top:20px;padding:15px;border:1.5px solid #9bad7e;border-radius:11px;background:var(--green-soft);font-weight:750;cursor:pointer}
+.consentCheck input{width:23px;height:23px;accent-color:var(--green);flex:none;margin-top:1px}
+.signatureBlock>label{display:block;margin-bottom:8px}
 .sig{width:100%;height:180px;border:1px solid #aebbc8;border-radius:9px;background:white;touch-action:none}
 .listItem{border:1px solid var(--line);background:white;padding:14px;border-radius:10px;margin-bottom:10px}
 .muted{color:var(--muted);font-size:13px}
@@ -88,7 +116,8 @@ button{cursor:pointer}
 @media(max-width:650px){
   .top{align-items:flex-start}.brandHome{width:170px}.brandHome img{height:45px}.headerTitle h1{font-size:16px}.headerTitle span{font-size:10px}
   .wrap{padding:18px 14px 112px}.intro{padding-top:22px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}
-  .deviceSummary{grid-template-columns:1fr 1fr}.photos{grid-template-columns:repeat(2,1fr)}.menu{grid-template-columns:1fr}
+  .deviceSummary{grid-template-columns:1fr 1fr}.photos,.photoGallery{grid-template-columns:repeat(2,1fr)}.menu{grid-template-columns:1fr}
+  .photoActions{grid-template-columns:1fr}.photoHeader{align-items:center}.photoHeader h2{font-size:18px}
   .selectedBeneficiary{grid-template-columns:32px 1fr;padding:14px}.selectedMark{width:30px;height:30px}.card,.beneficiaryPanel{padding:17px;border-radius:13px}
 }
 @media(max-width:420px){.brandHome{width:145px}.headerTitle span{display:none}.deviceSummary{grid-template-columns:1fr}.selectedBeneficiary .contract{display:block;margin:4px 0 0}.export{grid-template-columns:1fr}}
