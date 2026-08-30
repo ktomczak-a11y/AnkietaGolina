@@ -1,0 +1,35 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'pl.naszprad.ankietagolina'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'pl.naszprad.ankietagolina'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    signingConfigs {
+        release {
+            def keyFile = System.getenv('ANKIETA_KEYSTORE_FILE')
+            if (keyFile) {
+                storeFile file(keyFile)
+                storePassword System.getenv('ANKIETA_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('ANKIETA_KEY_ALIAS')
+                keyPassword System.getenv('ANKIETA_KEY_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (System.getenv('ANKIETA_KEYSTORE_FILE')) signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies { implementation 'androidx.core:core:1.15.0' }

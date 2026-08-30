@@ -1,0 +1,9 @@
+.beneficiaryBtn{width:100%;display:grid;grid-template-columns:42px 1fr 24px;align-items:center;gap:12px;text-align:left;margin-top:9px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:border-color .15s,background .15s,transform .15s}
+.beneficiaryBtn:hover,.beneficiaryBtn:focus{border-color:var(--green);background:var(--green-soft);transform:translateY(-1px);outline:none}
+.personIcon{width:40px;height:40px;border:1.5px solid var(--green);border-radius:50%;display:grid;place-items:center;color:var(--green);font-size:10px}
+.beneficiaryText{display:flex;flex-direction:column;gap:2px;min-width:0}
+.beneficiaryText>b{color:var(--ink);font-size:17px}
+.beneficiaryText small{font-size:12px;color:var(--muted);line-height:1.35;overflow-wrap:anywhere}
+.beneficiaryText strong{color:var(--green)}
+.resultArrow{color:var(--green);font-size:28px;text-align:right}
+@media(max-width:420px){.beneficiaryBtn{grid-template-columns:34px 1fr 16px;padding:12px;gap:9px}.personIcon{width:34px;height:34px}.beneficiaryText>b{font-size:15px}.resultArrow{font-size:22px}}
