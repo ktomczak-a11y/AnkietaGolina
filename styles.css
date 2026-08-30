@@ -88,6 +88,7 @@ button{cursor:pointer}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .tools button{padding:10px;border-radius:8px;border:1px solid var(--line);background:white;font-weight:700}
 .tools button.active{background:var(--green);color:white}
+.rotationTools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 12px}.rotationTools .btn{min-height:44px}
 .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .photo{aspect-ratio:1;background:#eef2f6;border:1px dashed #9aa9b8;border-radius:8px;overflow:hidden;display:grid;place-items:center}
 .photo img{width:100%;height:100%;object-fit:cover}
@@ -125,6 +126,7 @@ button{cursor:pointer}
 .loading{color:var(--green);font-weight:750;padding:12px 0;margin:0}
 .resultEmpty{padding:12px 0;margin:0}
 .export{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.uploadCard{border-top:5px solid var(--orange)}.uploadProgress{margin:18px 0}.uploadProgressTrack{height:14px;border-radius:999px;background:#e4e8e0;overflow:hidden}.uploadProgressTrack i{display:block;height:100%;background:linear-gradient(90deg,var(--orange),var(--green));border-radius:inherit;transition:width .35s ease}.uploadProgress p{margin:8px 0 0;color:var(--muted);font-size:13px;font-weight:750}.uploadProgress.complete p{color:var(--green)}.finishAudit{width:100%;font-size:17px}.newAuditReady{width:100%;margin-top:14px}.uploadSuccess{border-color:var(--green);background:#eef7e7}
 .hidden{display:none!important}
 @media(max-width:650px){
   .accessPage{padding:14px}.accessCard{padding:23px 18px;border-radius:16px}.accessLogo{height:62px}.accessCard h1{font-size:27px}
