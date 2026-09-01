@@ -1,1 +1,1 @@
-Wersja 14 — trwałe zapamiętanie zalogowanego urządzenia
+Wersja 15 — zachowanie proporcji mapy i położenia szkicu w PDF
