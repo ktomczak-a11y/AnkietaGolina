@@ -1,1 +1,1 @@
-Wersja 16 — wiele równoległych ankiet bez wymuszania powrotu
+Wersja 17 — stałe proporcje szkicu na telefonie i w PDF
