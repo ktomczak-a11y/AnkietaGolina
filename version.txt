@@ -1,1 +1,1 @@
-Wersja 15 — zachowanie proporcji mapy i położenia szkicu w PDF
+Wersja 16 — wiele równoległych ankiet bez wymuszania powrotu
