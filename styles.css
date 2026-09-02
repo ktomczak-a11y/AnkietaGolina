@@ -40,6 +40,13 @@ button{cursor:pointer}
 .progress{display:flex;gap:7px;margin:2px 0 22px}
 .progress i{height:6px;flex:1;border-radius:8px;background:#dde2d8}
 .progress i.on{background:var(--green)}
+.auditNav{position:sticky;top:81px;z-index:7;background:rgba(247,248,245,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px);padding:9px max(14px,env(safe-area-inset-left))}
+.auditNav>div{max-width:840px;margin:auto;display:flex;gap:7px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.auditNav button{flex:0 0 auto;min-height:42px;border:1px solid #bdc7b8;border-radius:9px;background:#fff;color:#3d443b;padding:7px 10px;font-size:13px;font-weight:800;white-space:nowrap}
+.auditNav button span{display:inline-grid;place-items:center;width:22px;height:22px;margin-right:6px;border-radius:50%;background:#e9eee4;color:var(--green);font-size:12px}
+.auditNav button.active{background:var(--green);border-color:var(--green);color:#fff}
+.auditNav button.active span{background:#fff;color:var(--green)}
+.auditNav button:disabled{opacity:.42;cursor:not-allowed}
 .card,.beneficiaryPanel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px;box-shadow:var(--shadow)}
 .card h2,.beneficiaryPanel h2{font-size:21px;color:var(--ink);margin:0 0 16px;letter-spacing:-.02em}
 .quickCard{margin-top:18px}
@@ -137,6 +144,7 @@ button{cursor:pointer}
   .deviceSummary{grid-template-columns:1fr 1fr}.photos,.photoGallery{grid-template-columns:repeat(2,1fr)}.menu{grid-template-columns:1fr}
   .photoActions{grid-template-columns:1fr}.photoHeader{align-items:center}.photoHeader h2{font-size:18px}
   .selectedBeneficiary{grid-template-columns:32px 1fr;padding:14px}.selectedMark{width:30px;height:30px}.card,.beneficiaryPanel{padding:17px;border-radius:13px}
+  .auditNav{top:69px;padding-top:7px;padding-bottom:7px}.auditNav button{min-height:39px;padding:6px 9px;font-size:12px}
 }
 @media(max-width:420px){.brandHome{width:145px}.headerTitle span{display:none}.deviceSummary{grid-template-columns:1fr}.selectedBeneficiary .contract{display:block;margin:4px 0 0}.export{grid-template-columns:1fr}}
 @media print{.top,.actions,.noPrint{display:none!important}.wrap{padding:0;max-width:none}.card{box-shadow:none;break-inside:avoid}body{background:white}}
