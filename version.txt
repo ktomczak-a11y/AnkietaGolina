@@ -1,1 +1,2 @@
 Wersja 21 — pełna nawigacja i edycja wszystkich sekcji zakończonego audytu
+Wersja 22 — pełny obraz mapy i stabilne położenie szkicu w aplikacji oraz PDF
