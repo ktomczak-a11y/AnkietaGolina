@@ -1,1 +1,1 @@
-Wersja 18 — powrót do każdej wcześniejszej sekcji audytu
+Wersja 19 — zakończenie audytu wyłącznie na Dysku Google, bez e-maila
