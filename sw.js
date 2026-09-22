@@ -1,8 +1,3 @@
-const CACHE='wizja-pv-v21';
-const ASSETS=['./','index.html','styles.css?v=20','beneficiaries.css?v=20','app.js?v=20','manifest.webmanifest','icon.svg','nasz-prad-logo.png','https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js'];
-self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
-self.addEventListener('activate',e=>e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))])));
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;let url=new URL(e.request.url),networkFirst=e.request.mode==='navigate'||(url.origin===self.location.origin&&/\.(?:js|css)$/.test(url.pathname));if(networkFirst){e.respondWith(fetch(e.request,{cache:'no-store'}).then(r=>{let clone=r.clone();caches.open(CACHE).then(c=>c.put(e.request,clone));return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./'))));return}e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(response=>{let clone=response.clone();caches.open(CACHE).then(c=>c.put(e.request,clone));return response})))});
 const CACHE='wizja-pv-v22';
 const ASSETS=['./','index.html','styles.css?v=22','beneficiaries.css?v=22','app.js?v=22','manifest.webmanifest','icon.svg','nasz-prad-logo.png','https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
