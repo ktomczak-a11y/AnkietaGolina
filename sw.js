@@ -1,4 +1,4 @@
-const CACHE='wizja-pv-v20';
+const CACHE='wizja-pv-v21';
 const ASSETS=['./','index.html','styles.css?v=20','beneficiaries.css?v=20','app.js?v=20','manifest.webmanifest','icon.svg','nasz-prad-logo.png','https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
 self.addEventListener('activate',e=>e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))])));
