@@ -1,1 +1,1 @@
-Wersja 19 — zakończenie audytu wyłącznie na Dysku Google, bez e-maila
+Wersja 20 — wymuszona aktualizacja strony i usunięcie starego modułu e-mail
