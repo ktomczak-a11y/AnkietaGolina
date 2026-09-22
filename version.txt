@@ -1,1 +1,1 @@
-Wersja 22 — pełny obraz mapy i stabilne położenie szkicu w aplikacji oraz PDF
+Wersja 23 — stabilniejszy zapis audytu z iPhone i mniejszy pakiet zdjęć
