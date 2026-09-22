@@ -1,1 +1,1 @@
-Wersja 23 — stabilniejszy zapis audytu z iPhone i mniejszy pakiet zdjęć
+Wersja 24 — pełnoekranowe szkicowanie mapy na telefonie ze stabilnymi współrzędnymi
