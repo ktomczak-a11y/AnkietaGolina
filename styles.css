@@ -95,18 +95,19 @@ button{cursor:pointer}
 .canvasWrap img,.canvasWrap canvas{position:absolute;inset:0;display:block;width:100%;height:100%}
 .canvasWrap img{object-fit:contain;object-position:center;background:#fff}
 .canvasWrap canvas{touch-action:none}
-.mapViewport{width:100%;overflow:auto;border-radius:12px;-webkit-overflow-scrolling:touch}
+.mapViewport{width:100%;max-width:100%;overflow:auto;border-radius:12px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:none}
 .mapScreenBar{display:flex;align-items:center;gap:8px;margin:12px 0}
 .mapScreenBar .btn{min-height:46px}.mapZoomLabel{min-width:54px;text-align:center;font-weight:850;color:var(--green)}
-.fullscreenMap{position:fixed;inset:0;z-index:50;margin:0;border:0;border-radius:0;padding:12px;background:#fff;overflow:auto;overscroll-behavior:contain}
+.fullscreenMap{position:fixed;inset:0;z-index:50;height:100dvh;margin:0;border:0;border-radius:0;padding:12px;background:#fff;overflow:hidden;overscroll-behavior:contain;display:flex;flex-direction:column}
 .fullscreenMap>h2,.fullscreenMap .mapFileField{display:none}
-.fullscreenMap .mapScreenBar{position:sticky;top:-12px;z-index:4;margin:-12px -12px 8px;padding:10px 12px;background:#fff;border-bottom:1px solid var(--line)}
+.fullscreenMap .mapScreenBar{z-index:4;flex:0 0 auto;margin:-12px -12px 8px;padding:10px 12px;background:#fff;border-bottom:1px solid var(--line)}
 .fullscreenMap .mapScreenBar .primary{flex:1}.fullscreenMap .mapScreenBar .btn:not(.primary){flex:0 0 48px;padding:8px}
-.fullscreenMap .tools{margin:8px 0}.fullscreenMap .tools button{padding:8px;font-size:13px}
-.fullscreenMap .rotationTools{margin-bottom:8px}.fullscreenMap .rotationTools .btn{min-height:40px;padding:7px}
-.fullscreenMap .mapViewport{height:auto;min-height:calc(100dvh - 245px);background:#20251f;border-radius:8px}
+.fullscreenMap .tools{flex:0 0 auto;flex-wrap:nowrap;overflow-x:auto;margin:6px 0;padding-bottom:3px}.fullscreenMap .tools button{flex:0 0 auto;padding:8px;font-size:13px}
+.fullscreenMap .rotationTools{flex:0 0 auto;margin-bottom:6px}.fullscreenMap .rotationTools .btn{min-height:38px;padding:6px}
+.fullscreenMap .mapViewport{flex:1 1 auto;height:auto;min-height:0;background:#20251f;border-radius:8px}
 .fullscreenMap .canvasWrap{width:calc(100% * var(--map-zoom));max-width:none;margin:auto;border-radius:8px}
-.fullscreenMap .mapHelp{margin:8px 0 0}
+.fullscreenMap .mapHelp{flex:0 0 auto;margin:6px 0 0;font-size:12px}
+.canvasWrap[data-tool="pan"] canvas{cursor:grab}.canvasWrap[data-tool="pan"] canvas:active{cursor:grabbing}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .tools button{padding:10px;border-radius:8px;border:1px solid var(--line);background:white;font-weight:700}
 .tools button.active{background:var(--green);color:white}
