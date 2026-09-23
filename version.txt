@@ -1,1 +1,1 @@
-Wersja 24 — pełnoekranowe szkicowanie mapy na telefonie ze stabilnymi współrzędnymi
+Wersja 25 — izolowane powiększanie mapy i osobny tryb przesuwania widoku
